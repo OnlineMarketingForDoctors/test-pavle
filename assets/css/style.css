@@ -291,10 +291,10 @@ address { font-style: normal; }
 /* ---------- Statement ---------- */
 .statement { padding: clamp(96px, 12vw, 170px) 0; background: var(--paper); position: relative; }
 .statement-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: center; }
-.statement-copy { grid-column: 1 / span 8; }
-.statement-text { font-size: clamp(1.65rem, 2.75vw, 2.55rem); line-height: 1.32; margin-bottom: 40px; max-width: 30ch; }
-.statement-text em { font-style: italic; color: var(--gilt-deep); }
-.statement-video { grid-column: 10 / span 3; position: relative; z-index: 2; }
+.statement-copy { grid-column: 1 / span 7; }
+.statement-text { font-size: clamp(1.65rem, 2.6vw, 2.45rem); line-height: 1.34; font-weight: 500; color: var(--ink); margin-bottom: 40px; max-width: 32ch; }
+.statement-text em { font-style: italic; font-weight: 500; color: #7A5B20; }
+.statement-video { grid-column: 10 / span 3; position: relative; z-index: 2; isolation: isolate; }
 .video-frame { position: relative; border-radius: var(--r-img); overflow: hidden; box-shadow: var(--shadow-lift); aspect-ratio: 9 / 16; background: var(--sand); }
 .video-frame video { width: 100%; height: 100%; object-fit: cover; }
 .video-play { position: absolute; inset: 0; margin: auto; width: 76px; height: 76px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .92); display: grid; place-items: center; box-shadow: var(--shadow); transition: transform .4s var(--ease); }
@@ -303,7 +303,8 @@ address { font-style: normal; }
 .video-frame.is-playing .video-play { opacity: 0; pointer-events: none; }
 .statement-video figcaption { margin-top: 16px; font-size: .9rem; color: var(--muted); }
 .statement-video figcaption b { display: block; color: var(--ink); font-family: var(--serif); font-size: 1.3rem; font-weight: 400; font-style: italic; }
-.statement-photo { position: absolute; z-index: 1; width: clamp(140px, 13vw, 200px); right: calc(max(var(--gutter), (100vw - 1240px) / 2) + 19%); top: 18%; border-radius: 120px 120px var(--r-img) var(--r-img); overflow: hidden; box-shadow: var(--shadow); }
+.statement-photo { position: absolute; z-index: -1; width: 58%; left: -46%; top: 12%; border-radius: 120px 120px var(--r-img) var(--r-img); overflow: hidden; box-shadow: var(--shadow); }
+.statement-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 @media (max-width: 899.98px) {
   .statement-grid { grid-template-columns: 1fr; }
   .statement-copy, .statement-video { grid-column: auto; }
