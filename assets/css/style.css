@@ -660,6 +660,23 @@ address { font-style: normal; }
 }
 @media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } }
 
+/* ---------- Instagram ---------- */
+.insta { background: var(--paper); padding: clamp(88px, 10vw, 140px) 0; }
+.insta-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px 48px; flex-wrap: wrap; margin-bottom: 44px; }
+.insta-head .h2 em { font-style: italic; color: var(--gilt-deep); }
+.insta-head .lead { margin: 0; }
+.ig-glyph { fill: none !important; stroke: currentColor; stroke-width: 1.8; }
+.ig-glyph .fill { fill: currentColor; stroke: none; }
+.ig-track { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(250px, calc((100% - 3 * 22px) / 4)); gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 6px 2px 24px; align-items: start; }
+.ig-track::-webkit-scrollbar { display: none; }
+.ig-card { scroll-snap-align: start; min-height: 420px; border-radius: var(--r-card); background: var(--linen); box-shadow: var(--shadow); overflow: hidden; transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+.ig-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.ig-card blockquote.instagram-media, .ig-card iframe { margin: 0 !important; min-width: 0 !important; width: 100% !important; max-width: 100% !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+.ig-card blockquote.instagram-media { padding: 24px; display: grid; place-items: center; min-height: 420px; background: var(--linen); }
+.ig-card blockquote a { font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gilt-deep); }
+.ig-note { margin-top: 10px; font-size: .9rem; color: var(--muted); }
+@media (max-width: 760px) { .ig-track { grid-auto-columns: 84%; } }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--linen); padding: 88px 0 40px; border-top: 1px solid var(--line); }
 .footer-grid { display: grid; grid-template-columns: 4fr 4fr 4fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--line); }
