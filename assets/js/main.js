@@ -283,21 +283,6 @@
   }
 
 
-  /* ---------- Instagram embeds: load only when the block is near ---------- */
-  var ig = $('[data-ig]');
-  if (ig) {
-    var loadIg = function () {
-      if (window.instgrm) { window.instgrm.Embeds.process(); return; }
-      var sc = document.createElement('script');
-      sc.async = true; sc.src = 'https://www.instagram.com/embed.js';
-      document.body.appendChild(sc);
-    };
-    if ('IntersectionObserver' in window) {
-      var igo = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { igo.disconnect(); loadIg(); } }, { rootMargin: '600px 0px' });
-      igo.observe(ig);
-    } else { loadIg(); }
-  }
-
   var yr = $('[data-year]'); if (yr) yr.textContent = new Date().getFullYear();
   onScroll();
 })();
